@@ -1,0 +1,63 @@
+spring:
+  application:
+    name: ReturnTaxiApp-BE
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+          batch_size: 500
+        order_inserts: true
+        order_updates: true
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        generate_statistics: false
+        connection:
+          provider_disables_autocommit: true
+        query:
+          fail_on_pagination_over_collection_fetch: true
+          in_clause_parameter_padding: true
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  mail:
+
+    host: smtp.gmail.com
+    port: 587
+    username: dilshanthanushka98@gmail.com
+    password: urpi qcdr nwwv buvp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  secret: Zk9lQkR5Q2FjS3pHVVdWcXJUV0JqS2FvT2NPaFhZQkR3RkE=
+  access-expiration: 86400000
+  refresh-expiration: 604800000
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1/returntaxiapp
+    tomcat:
+      connection-timeout: 40s
+      keep-alive-timeout: 40s
+
+
+app:
+  mail:
+    admin-email: dilshan.20223261@iit.ac.lk
+    username: dilshanthanushka98@gmail.com

@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://db.vtmsdndntzmvhsmpappe.supabase.co:5432/postgres
+    username: postgres
+    password: D*333ilshan
+    driver-class-name: org.postgresql.Driver
+
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+      minimumIdle: 2
+      maximumPoolSize: 5
+      idleTimeout: 30000
+      connectionTimeout: 30000
+      maxLifetime: 1800000
+      leakDetectionThreshold: 10000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
